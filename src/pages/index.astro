@@ -1,11 +1,14 @@
 ---
+import Features from "../components/Features.astro";
 import Showcase from "../components/Showcase.astro";
+import Features from '../components/Features.astro';
 import Layout from "../layouts/Layout.astro";
 const name = 'Mikel-Jon West'
 ---
 
 <Layout>
-    <Showcase />
+    <Showcase showExtra={true} />
+    <Features />
     <div>
 <h1>Heyyyyy {name} </h1>
 
