@@ -1,19 +1,21 @@
 ---
 import Features from "../components/Features.astro";
 import Showcase from "../components/Showcase.astro";
-import Features from '../components/Features.astro';
 import Layout from "../layouts/Layout.astro";
+import Tabs from "../components/Tabs.astro";
 const name = 'Mikel-Jon West'
 ---
 
 <Layout>
     <Showcase showExtra={true} />
     <Features />
+    <Tabs activeTextColor="yellow" headings={['Video Editor', 'Graphic Designer', 'Writer/Director', 'Technician']} contents={['I edits the videos.', 'I design all the graphics. For all things. Ever.', 'He writes and directs?? What??', 'I build, operate, and fix cool things.']} />
     <div>
-<h1>Heyyyyy {name} </h1>
-
-<p>But this is so much easier than word!</p>
-
-</div>
+        <h1>Heyyyyy {name} </h1>
+        
+        <p>But this is so much easier than word!</p>
+        
+        </div>
+    
 </Layout>
 

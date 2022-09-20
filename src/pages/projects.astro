@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Showcase from "../components/Showcase.astro";
+
+const projects = await Astro.glob('../projects/*.md');
+---
+
+<Layout title="Mike's Projects" >
+    <Showcase heading="Projects" text="Projects I've worked on" />
+    <section class="page-content">
+        <div class="container">
+            {projects.map(project =>(
+                <Card>
+                    <h3>{project.frontmatter.title}</h3>
+                    <p>{project.frontmatter.excerpt}</p>
+                    <a class="btn" href={`/${project.frontmatter.slug}`}>Read all about it</a>
+                    </Card>
+            ))}
+
+        </div>
+    </section>
+</Layout>

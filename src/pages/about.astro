@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from '../components/Card.astro'
+import logos from '../images/skill-logos.png';
+import logosSmall from '../images/skill-logos-small.png';
+---
+
+<Layout title="About Mikel-Jon West" >
+    <section class="page-content">
+        <div class="container">
+          <h2>About Mikel-Jon West</h2>
+          <p>
+            Mike is a cool guy.
+          </p>
+    
+          <p>
+            He does stuff and things, man.
+          </p>
+    
+          <Card dark={true}>
+            <h3>It's like he can do anything</h3>
+            <p>
+              Anything in the world.
+            </p>
+          </Card>
+          
+          <h3>Look at these crazy things he can do</h3>
+          <img class="logos" src={logos} alt="" />
+          <img class="logos-small" src={logosSmall} alt="" />
+          <p>
+            Someone pay this man.
+          </p>
+    
+      
+            <h3>Listing things with emojis?</h3>
+            <p>
+              That's just the kind of thing I'm talking about
+            </p>
+    
+            <ul>
+              <li>💬 Speaking of talking</li>
+              <li>
+                💬 Say what?
+              </li>
+              <li>
+                💬 Oh yes he did.
+              </li>
+            </ul>
+       
+        </div>
+      </section>
+</Layout>
