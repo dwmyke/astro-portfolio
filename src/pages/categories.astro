@@ -3,18 +3,16 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Showcase from "../components/Showcase.astro";
 
-const categories = await Astro.glob('../projects/*.md');
+const projects = await Astro.glob('../projects/*.md');
 ---
 
 <Layout title="Project Categories" >
     <Showcase heading="Project Categories" text="What kind of projects does Mike work on?" />
     <section class="page-content">
         <div class="container">
-            {categories.map(project =>(
+            {projects.map(project.frontmatter.categories =>(
                 <Card>
-                    <h3>{project.frontmatter.category}</h3>
-                    <p>{project.frontmatter.excerpt}</p>
-                    <a class="btn" href={`/${project.frontmatter.category}`}>{project.frontmatter.category}</a>
+                    <a class="btn" href={`/${categories}`}>{categories}</a>
                     </Card>
             ))}
 
