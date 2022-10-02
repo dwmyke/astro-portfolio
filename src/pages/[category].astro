@@ -5,9 +5,9 @@ import Card from "../components/Card.astro";
 export async function getStaticPaths() {
     const projects = await Astro.glob('../projects/*.md');
 
-    return projects.map(project => ({
+    return projects.map((project) => ({
         params: {
-            categories: [project.frontmatter.categories]
+            categories: project.frontmatter.categories
         },
         props: {
             project
@@ -23,7 +23,7 @@ const { Content, frontmatter } = Astro.props.project;
         <div class="container">
             <Card>
                 <a class="btn" href="/projects">Back</a>
-                <h2>{frontmatter.title}</h2>
+                <h2>{frontmatter.categories}</h2>
                 <div>
                     <strong>Release date: </strong>{new Date (frontmatter.date).toLocaleDateString()}
                 </div>
