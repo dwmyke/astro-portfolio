@@ -61,7 +61,7 @@ export default defineConfig({
                   ]
             },
             workbox: {
-              navigateFallback: '/',
+              navigateFallback: '/404',
               globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}'],
             },
             devOptions: {
