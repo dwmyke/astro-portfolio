@@ -2,12 +2,20 @@
 import Header from '../components/Header.astro';
 import Seo from '../components/Seo.astro';
 import '../styles/global.css'
+import '../styles/typography.css'
+// Supports weights 400-700
+import '@fontsource-variable/cabin';
+// Supports weights 300-900
+import '@fontsource-variable/rubik';
+import '@fontsource/voces';
 
 export interface Props {
     title?: string;
     description?: string;
     image?: string;
 }
+
+
 
 const { title, description, image } = Astro.props;
 ---
@@ -20,6 +28,7 @@ const { title, description, image } = Astro.props;
         <main>
 		<Header></Header>
         <h1>{title}</h1>
+        <h2>tagline</h2>
         <p>{description}</p>
         <slot />
     </main>
