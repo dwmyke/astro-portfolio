@@ -112,8 +112,14 @@ small {
 
 strong {
   font-weight: 700;
-  font-style: italic;
+  font-style: oblique 14deg;
   color: var(--yellow);
+}
+
+em {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--gold);
 }
 
 b {
