@@ -14,8 +14,9 @@
     "@fontsource-variable/cabin": "^5.0.17",
     "@fontsource-variable/rubik": "^5.0.20",
     "@fontsource-variable/syne": "^5.0.18",
+    "@fontsource/roboto": "^5.0.8",
     "@fontsource/voces": "^5.0.18",
-    "astro": "^4.0.8",
+    "astro": "^4.0.9",
     "typescript": "^5.3.3"
   }
 }

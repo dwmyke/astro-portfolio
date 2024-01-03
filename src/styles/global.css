@@ -1,4 +1,39 @@
 /*
+  CSS Variables
+*/
+
+:root {
+/*
+Typography
+*/
+  --text-xs: 0.44rem;
+  --text-sm: 0.67rem;
+  --text-md: 1rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2.25rem;
+  --text-2xl: 3.38rem;
+  --text-3xl: 5.06rem;
+  --text-4xl: 7.59rem;
+  --text-5xl: 11.39rem;
+  --font-headline: 'Cabin Variable', sans-serif;
+  --font-sub: 'Roboto', sans-serif;
+  --font-body: 'Voces', sans-serif;
+/*
+Colors
+*/
+--blue: #1d73f3;
+--yellow: #f2f21d;
+--red: #f71e1e;
+--gold: #f2bd1d;
+--dark-blue: #02070f; 
+--purple: #af1df2;
+/*
+Gradients
+*/
+--gr-bw: linear-gradient(24deg, rgb(2, 7, 15) 0.00%, rgb(146, 148, 152) 100.00%);
+}
+
+/*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
@@ -10,21 +45,95 @@
   padding: 0;
   font: inherit;
 }
+
+html {font-size: 16px;}
+
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--blue);
+  background: var(--gr-bw) no-repeat center fixed var(--dark-blue);
+  background-blend-mode: hard-light;
 }
+
+a {
+  color: var(--gold);
+}
+
+p {
+  font-size: var(--text-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-sub);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+h1 {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  margin-top: 0;
+  font-size: var(--text-4xl);
+}
+
+h2 { 
+  font-size: var(--text-3xl);
+}
+
+h3 { 
+  font-family: var(--font-sub);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+}
+
+h4 { 
+  font-size: var(--text-xl); 
+}
+
+h5 { 
+  font-size: var(--text-lg); 
+}
+
+.text-caption { 
+  font-size: var(--text-sm); 
+}
+
+small {
+  font-size: var(--text-xs);
+}
+
+strong {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--yellow);
+}
+
+b {
+  font-weight: 700;
+  color: var(--purple);
+}
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
+
 input, button, textarea, select {
   font: inherit;
 }
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
 #root, #__next {
   isolation: isolate;
 }
