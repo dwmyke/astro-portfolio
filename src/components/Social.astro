@@ -1,0 +1,14 @@
+---
+import Icon from './Icon.astro';
+const { platform, username, iconPath, iconAlt } = Astro.props;
+
+interface Props {
+    platform: string;
+    username: string;
+    iconPath: string;
+    iconAlt: string;
+}
+
+---
+
+<a href={`https://www.${platform}.com/${username}`} aria-label={platform}><Icon imagePath={iconPath} altText={iconAlt}</a>

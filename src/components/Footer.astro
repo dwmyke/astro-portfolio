@@ -1,0 +1,22 @@
+---
+import Photo from "./Photo.astro";
+import Social from "./Social.astro";
+
+---
+
+<footer>
+    <div class="container">
+        <div class="even-columns">
+<div>
+   <a href="/"><Photo imagePath='/src/assets/images/icon.png' altText='A headshot of Mike West' /></a>
+   <ul role="list">
+  <li><Social platform="facebook" username="thatmikewest" iconPath="/src/assets/icons/facebook.svg" iconAlt="facebook icon"></Social></li>
+  <li><Social platform="youtube" username="@MegaUltraMike" iconPath="/src/assets/icons/youtube.svg" iconAlt="youtube icon"/></li>
+  <li><a href={`https://www.imdb.com/name/nm1761143/`}>IMDB</a></li>
+   </ul>
+</div>
+<div></div>
+<div></div>
+        </div>
+    </div>
+</footer>

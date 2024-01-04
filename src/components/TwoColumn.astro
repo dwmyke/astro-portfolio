@@ -1,5 +1,6 @@
 ---
 import Icon from '../components/Icon.astro';
+import Photo from './Photo.astro';
 ---
 
 <section>
@@ -9,8 +10,27 @@ import Icon from '../components/Icon.astro';
             <h1>Primary Heading</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A eius perferendis sapiente harum dolores nulla ea nesciunt provident maxime ipsum id doloribus dolorem ullam dolor impedit, repudiandae vel voluptatibus distinctio.</p>
             <button>Your ipsum</button>
+            <div>
             <Icon imagePath="/src/assets/icons/film-reel.svg" altText="film reel icon" />
+        </div>
+        <div>
+            <Photo imagePath='/src/assets/images/icon.png' altText='A headshot of Mike West' />
+        </div>
         </div>
         </div>
     </div>
+</section>
+
+<section>
+    <div class="container">
+    <div class="even-columns">
+<h2>Secondary Heading</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi, et soluta nesciunt beatae quae dignissimos unde earum, reiciendis deserunt eveniet? Provident placeat vitae vero id soluta impedit? In, dolorum.</p>
+<ul class="numbered-items" role="list">
+    <li><h3>title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam facilis dignissimos quibusdam neque nam! Consequuntur error neque quidem accusamus alias voluptatem assumenda eius deserunt, voluptatum, tenetur expedita facere molestias.</p></li>
+    <li><h3>title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam facilis dignissimos quibusdam neque nam! Consequuntur error neque quidem accusamus alias voluptatem assumenda eius deserunt, voluptatum, tenetur expedita facere molestias.</p></li>
+    <li><h3>title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam facilis dignissimos quibusdam neque nam! Consequuntur error neque quidem accusamus alias voluptatem assumenda eius deserunt, voluptatum, tenetur expedita facere molestias.</p></li>
+</ul>
+    </div>
+</div>
 </section>
