@@ -3,35 +3,42 @@ export interface Props {
     title?: string;
     description?: string;
     image?: string;
+    keywords?: string;
+    author?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title="Mikel-Jon (Mike) West", description="Mike West: Filmmaker, Video Editor, Graphic Designer, and Technician", image='/social.jpg' } = Astro.props;
+const { title="Mikel-Jon (Mike) West", description="Mike West: Filmmaker, Video Editor, Graphic Designer, and Technician", image='/social.jpg', keywords="portfolio website Mike West", author="Mikel-Jon (Mike) West" } = Astro.props;
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<!-- FAVICON -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<!-- GENERIC METADATA -->
+<meta name="author" content={author} />
 <meta name="generator" content={Astro.generator} />
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="msapplication-TileColor" content="#02070F">
-<meta name="theme-color" content="#1D73F3">
-
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="msapplication-TileColor" content="#02070F" />
+<!-- THEME COLOR -->
+<meta name="theme-color" content="#1D73F3" />
+<!-- TITLE -->
 <title>{title}</title>
 <meta name="title" content={title} />
-<meta name="description" content={description} />
-
+<!-- CANONICAL URL -->
 <link rel="canonical" href={canonicalURL} />
-
+<!-- OPENGRAPH TAGS (SOCIAL MEDIA) -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
-
+<!-- TWITTER/X CARD DATA -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />

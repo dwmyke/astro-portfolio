@@ -1,6 +1,7 @@
 ---
 import Photo from "./Photo.astro";
 import Social from "./Social.astro";
+const year = new Date().getFullYear()
 ---
 
 <footer>
@@ -9,6 +10,7 @@ import Social from "./Social.astro";
 <div>
    <a href="/"><Photo imagePath='/src/assets/images/icon.png' altText='A headshot of Mike West' /></a>
    <ul role="list" aria-label="social links">
+    <p>&copy; <span id="footer-year">{year}</span> - Mikel-Jon (Mike) West</p>
   <li><Social platform="facebook" username="thatmikewest" iconPath="/src/assets/icons/facebook.svg" iconAlt="facebook icon"></Social></li>
   <li><Social platform="youtube" username="@MegaUltraMike" iconPath="/src/assets/icons/youtube.svg" iconAlt="youtube icon"/></li>
   <li><Social platform="imdb" username="name/nm1761143/" iconPath="/src/assets/icons/imdb.svg" iconAlt="imdb icon"/></li>
@@ -20,4 +22,6 @@ import Social from "./Social.astro";
     </div>
 </footer>
 
-
+<script is:inline data-astro-rerun>
+    document.getElementById("footer-year").innerText = new Date().getFullYear();
+  </script>
